@@ -1,0 +1,8 @@
+baseURL = "https://www.davidejones.ltd/"
+paginate = 100
+defaultContentLanguage = "en"
+enableEmoji = true
+languageCode = "en-us"
+metaDataFormat = "yaml"
+title = "David Edward Jones Limited"
+googleAnalytics = "UA-143082732-1"
