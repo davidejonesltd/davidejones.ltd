@@ -11,6 +11,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{{ $.Site.BaseURL }}css/main.css" rel="stylesheet" />
+    <link href="{{ $.Site.BaseURL }}css/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,300i,400,400i,700,700i%7CMontserrat:100,200,300,400,500,700">
+
     <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
 
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
@@ -18,34 +22,93 @@
     {{ end }}
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">David Edward Jones Limited</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-    <main role="main" class="container">
-        {{ block "main" . }}{{ end }}
 
-        <style>
-            body {
-                padding-top: 5rem;
-            }
-            .starter-template {
-                padding: 3rem 1.5rem;
-                text-align: center;
-            }
-        </style>
-        <div class="starter-template">
-            <h1>David Edward Jones Limited</h1>
-            <p class="lead">Coming soon</p>
-        </div>
-    </main>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <div class="site-container">
+
+        <section id="home" class="d-md-flex fullscreen-md">
+            <div class="overlay">
+                <div class="overlay-inner" data-gradient-bg="[['#04075c','#442f66'],['#328bc2','#0075bd']]"></div>
+                <div class="overlay-inner opacity-40" id="polygon-background"></div>
+            </div>
+            <div class="container align-self-md-center text-center">
+                <h1 class="heading-uppercase text-white mb-3">David Edward Jones Ltd</h1>
+                <p class="lead text-white mb-5">We Develop, launch and Maintain software solutions for digital products.</p>
+                <a href="#what-we-do" class="btn btn-white scrollto">Learn more</a>
+            </div>
+        </section>
+
+        <section id="what-we-do" class="border-top">
+            <div class="container">
+                <h2 class="mb-4">What we Do</h2>
+                <p class="mb-5">Lorem ipsum dolor sit amet, altera facete definiebas nec et. Qui te aeque dolore, quaeque senserit reprimique vix in, et euismod torquatos qui. Nulla impetus aliquando eu sea, mundi possit vix et, ad pri iusto ceteros. Nostrud luptatum assueverit an qui.</p>
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 mb-4">
+                        <div class="feature-block feature-boxed feature-bordered animated" data-animation="fadeInUp">
+                            <h3 class="h4 mb-2">Website Development</h3>
+                            <p>In non luctus lacus. Morbi id orci diam. Donec nec ullamcorper nulla, tincidunt gravida magna. Nullam in est vel justo mattis tristique.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 mb-4">
+                        <div class="feature-block feature-boxed feature-bordered animated" data-animation="fadeInUp" data-animation-delay="150">
+                            <h3 class="h4 mb-2">Software Development</h3>
+                            <p>In non luctus lacus. Morbi id orci diam. Donec nec ullamcorper nulla, tincidunt gravida magna. Nullam in est vel justo mattis tristique.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 mb-4">
+                        <div class="feature-block feature-boxed feature-bordered animated" data-animation="fadeInUp" data-animation-delay="300">
+                            <h3 class="h4 mb-2">App Development</h3>
+                            <p>In non luctus lacus. Morbi id orci diam. Donec nec ullamcorper nulla, tincidunt gravida magna. Nullam in est vel justo mattis tristique.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 mb-4">
+                        <div class="feature-block feature-boxed feature-bordered animated" data-animation="fadeInUp" data-animation-delay="450">
+                            <h3 class="h4 mb-2">Automation &amp; Scripting</h3>
+                            <p>In non luctus lacus. Morbi id orci diam. Donec nec ullamcorper nulla, tincidunt gravida magna. Nullam in est vel justo mattis tristique.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 mb-4 mb-sm-0">
+                        <div class="feature-block feature-boxed feature-bordered animated" data-animation="fadeInUp" data-animation-delay="600">
+                            <h3 class="h4 mb-2">Administration and CMS</h3>
+                            <p>In non luctus lacus. Morbi id orci diam. Donec nec ullamcorper nulla, tincidunt gravida magna. Nullam in est vel justo mattis tristique.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                        <div class="feature-block feature-boxed feature-bordered animated" data-animation="fadeInUp" data-animation-delay="750">
+                            <h3 class="h4 mb-2">Friendly Support</h3>
+                            <p>In non luctus lacus. Morbi id orci diam. Donec nec ullamcorper nulla, tincidunt gravida magna. Nullam in est vel justo mattis tristique.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Site footer -->
+        <footer class="site-footer bg-light">
+            <div class="container">
+                <p class="text-center">&copy; 2019 David Edward Jones Limited - All Rights Reserved</p>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="{{ $.Site.BaseURL }}js/jquery.min.js"></script>
+    <script src="{{ $.Site.BaseURL }}js/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ $.Site.BaseURL }}js/jquery.waypoints.min.js"></script>
+    <script src="{{ $.Site.BaseURL }}js/jquery.smooth-scroll.min.js"></script>
+    <script src="{{ $.Site.BaseURL }}js/granim.min.js"></script>
+    <script src="{{ $.Site.BaseURL }}js/particles.min.js"></script>
+    <script src="{{ $.Site.BaseURL }}js/particles-polygon.js"></script>
+    <script src="{{ $.Site.BaseURL }}js/main.js"></script>
 
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
         {{ template "_internal/google_analytics_async.html" . }}
